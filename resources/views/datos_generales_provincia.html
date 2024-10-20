@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Crear proyecto</title>
+        <!-- Enlazar CSS de Font Awesome localmente -->
+        <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" />
+        <!-- Enlazar Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <!-- Enlazar DataTables CSS -->
+        <link rel="stylesheet" href="/assets/DataTables/datatables.min.css" />
+        <!-- Enlazar CSS -->
+        <link rel="stylesheet" href="/assets/css/forms.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6"></div>
+                        <!-- /.col -->
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb float-md-end">
+                                    <li class="breadcrumb-item">
+                                        <a
+                                            href="javascript:void(0)"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop"
+                                            >Inicio</a
+                                        >
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade"
+                                            id="staticBackdrop"
+                                            data-bs-backdrop="static"
+                                            data-bs-keyboard="false"
+                                            tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1
+                                                            class="modal-title fs-5"
+                                                            id="staticBackdropLabel"
+                                                        >
+                                                            Modal title
+                                                        </h1>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"
+                                                        ></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Cancelar
+                                                            <i
+                                                                class="fa-solid fa-ban"
+                                                            ></i>
+                                                        </button>
+                                                        <a
+                                                            href="/"
+                                                            class="btn btn-primary"
+                                                            role="button"
+                                                            >Aceptar
+                                                            <i
+                                                                class="fa-solid fa-check"
+                                                            ></i
+                                                        ></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="breadcrumb-item active"
+                                        aria-current="page"
+                                    >
+                                        Creación de proyecto
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+
+            <!-- Hoverable rows start -->
+            <section class="container">
+                <header>1. Datos Generales</header>
+                <form action="#" class="form">
+                    <div class="row">
+                        <div class="col-md-6 col-12 mb-3">
+                            <div class="form-group">
+                                <label for="provincia" style="font-weight: bold"
+                                    >Provincia</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="provincia"
+                                    id="provincia"
+                                    placeholder="Ingresar la provincia"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="canton" style="font-weight: bold"
+                                    >Cantón</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="canton"
+                                    id="canton"
+                                    placeholder="Ingresar el canton"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mb-3">
+                            <div class="form-group">
+                                <label for="parroquia" style="font-weight: bold"
+                                    >Parroquia</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="parroquia"
+                                    id="parroquia"
+                                    placeholder="Ingresar la parroquia"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="comunidad" style="font-weight: bold"
+                                    >Comunidad/Barrio/Recinto</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="comunidad"
+                                    id="comunidad"
+                                    placeholder="Ingresar la comunidad"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mb-5">
+                            <div class="form-group">
+                                <label
+                                    for="coordenadax"
+                                    style="font-weight: bold"
+                                    >Coordenadas X</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="coordenadax"
+                                    id="coordenadax"
+                                    placeholder="Ingresar la coordenada x"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label
+                                    for="coordenaday"
+                                    style="font-weight: bold"
+                                    >Coordenadas Y</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="coordenaday"
+                                    id="coordenaday"
+                                    placeholder="Ingresar la coordenada y"
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <a href="javascript:void(0)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" class="btn btn-secondary">Regresar <i class="fa-solid fa-rotate-left"></i></a>
+                            <button type="button" class="btn btn-success">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- Enlazar jQuery localmente -->
+        <script src="/js/jquery-3.7.1.min.js"></script>
+        <!-- Enlazar Bootstrap JS -->
+        <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
