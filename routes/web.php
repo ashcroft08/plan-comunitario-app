@@ -28,3 +28,7 @@ $router->get('/datos_generales_provincia', function () {
 $router->get('/datos_generales_habitantes', function () {
     return view('datos_generales_habitantes');
 });
+
+$router->get('/datos_generales_delegado', function () {
+    return view('datos_generales_delegado');
+});
