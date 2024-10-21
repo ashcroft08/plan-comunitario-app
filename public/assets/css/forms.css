@@ -76,8 +76,12 @@ body {
   .form {
     display: flex; /* Usa flexbox para el contenedor */
     flex-direction: column; /* Alinea los elementos en columna */
-    align-items: flex-end; /* Alinea los elementos al final del contenedor (derecha) */
+     /* Alinea los elementos al final del contenedor (derecha) */
     margin-top: 30px; /* Añade margen superior al contenedor si es necesario */
+}
+
+.botonsform .col {
+  text-align: right;
 }
 
   /*Responsive*/

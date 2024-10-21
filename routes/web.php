@@ -36,3 +36,7 @@ $router->get('/datos_generales_delegado', function () {
 $router->get('/datos_generales_responsables', function () {
     return view('datos_generales_responsables');
 });
+
+$router->get('/datos_generales_documentacion', function () {
+    return view('datos_generales_documentacion');
+});

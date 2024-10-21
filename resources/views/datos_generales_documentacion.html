@@ -109,208 +109,70 @@
                 <header>1. Datos Generales</header>
                 <form action="#" class="form">
                     <div class="row">
-                        <div class="col-md-6 col-12 mb-4">
+                        <div class="col-md-6 col-12 mb-3">
                             <div class="form-group">
                                 <label
-                                    for="nombreResp"
+                                    for="antecedentes"
                                     style="font-weight: bold"
-                                    >Nombre responsable del CCGR</label
+                                    >Antecedentes</label
                                 >
-                                <input
-                                    type="text"
+                                <textarea
                                     class="form-control"
-                                    name="nombreResp"
-                                    id="nombreResp"
-                                    placeholder="Ingresar el nombre del responsable"
+                                    id="antecedentes"
+                                    name="antecedentes"
+                                    rows="5"
+                                    placeholder="Escribe los antecedentes con saltos de línea..."
                                     required
-                                />
+                                ></textarea>
                             </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="form-group">
                                 <label
-                                    for="telfResp"
+                                    for="objetivo_general"
                                     style="font-weight: bold"
-                                    >Teléfono del responsable del CCGR</label
+                                    >Objetivo General:</label
                                 >
-                                <input
-                                    type="text"
+                                <textarea
                                     class="form-control"
-                                    name="telfResp"
-                                    id="telfResp"
-                                    placeholder="Ingresar  el número de teléfono del responsable"
+                                    id="objetivo_general"
+                                    name="objetivo_general"
+                                    rows="5"
                                     required
-                                />
+                                ></textarea>
                             </div>
                         </div>
                         <div class="col-md-6 col-12 mb-4">
                             <div class="form-group">
                                 <label
-                                    for="secreResp"
+                                    for="objetivos_especificos"
                                     style="font-weight: bold"
-                                    >Nombre secretario/a del CCGR</label
+                                    >Objetivos Específicos:</label
                                 >
-                                <input
-                                    type="text"
+                                <textarea
                                     class="form-control"
-                                    name="secreResp"
-                                    id="secreResp"
-                                    placeholder="Ingresar el nombre del secretario/a"
+                                    id="objetivos_especificos"
+                                    name="objetivos_especificos"
+                                    rows="5"
+                                    placeholder="1. Primer objetivo&#10;2. Segundo objetivo&#10;..."
                                     required
-                                />
+                                ></textarea>
                             </div>
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="form-group">
                                 <label
-                                    for="secreTelf"
+                                    for="marco_legal"
                                     style="font-weight: bold"
-                                    >Teléfono del secretario/a del CCGR</label
+                                    >Marco Legal:</label
                                 >
-                                <input
-                                    type="text"
+                                <textarea
                                     class="form-control"
-                                    name="secreTelf"
-                                    id="secreTelf"
-                                    placeholder="Ingresar el número de teléfono del secretario/a"
+                                    id="marco_legal"
+                                    name="marco_legal"
+                                    rows="5"
                                     required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 mb-4">
-                            <div class="form-group">
-                                <label
-                                    for="nombreCoord"
-                                    style="font-weight: bold"
-                                    >Nombre coordinador/a brigadas de primera respuesta del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="nombreCoord"
-                                    id="nombreCoord"
-                                    placeholder="Ingresar el nombre del coordinador"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="form-group">
-                                <label
-                                    for="telfCoord"
-                                    style="font-weight: bold"
-                                    >Teléfono del coordinador/a brigadas de primera respuesta del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="telfCoord"
-                                    id="telfCoord"
-                                    placeholder="Ingresar el número de teléfono del coordinador/a"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 mb-4">
-                            <div class="form-group">
-                                <label
-                                    for="nombreLiderPR"
-                                    style="font-weight: bold"
-                                    >Nombre lider brigadas de primeros auxilios del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="nombreLiderPR"
-                                    id="nombreLiderPR"
-                                    placeholder="Ingresar el nombre del lider de primeros auxilios"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="form-group">
-                                <label
-                                    for="telfLiderPR"
-                                    style="font-weight: bold"
-                                    >Teléfono del lider brigadas de primeros auxilios del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="telfLiderPR"
-                                    id="telfLiderPR"
-                                    placeholder="Ingresar  el número de teléfono del lider de primeros auxilios"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 mb-4">
-                            <div class="form-group">
-                                <label
-                                    for="nombreLiderEva"
-                                    style="font-weight: bold"
-                                    >Nombre lider brigadas de evacuación del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="nombreLiderEva"
-                                    id="nombreLiderEva"
-                                    placeholder="Ingresar el nombre del lider brigadas de evacuación"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="form-group">
-                                <label
-                                    for="telfLiderEva"
-                                    style="font-weight: bold"
-                                    >Teléfono del lider brigadas de evacuación del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="telfLiderEva"
-                                    id="telfLiderEva"
-                                    placeholder="Ingresar el teléfono del lider brigadas de evacuación"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 mb-4">
-                            <div class="form-group">
-                                <label
-                                    for="nombreLiderBrig"
-                                    style="font-weight: bold"
-                                    >Nombre lider brigadas de incendios del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="nombreLiderBrig"
-                                    id="nombreLiderBrig"
-                                    placeholder="Ingresar el nombre del lider brigadas de incendios"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 mb-5">
-                            <div class="form-group">
-                                <label
-                                    for="telfLiderBrig"
-                                    style="font-weight: bold"
-                                    >Teléfono del lider brigadas de incendios del CCGR</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="telfLiderBrig"
-                                    id="telfLiderBrig"
-                                    placeholder="Ingresar el teléfono del lider brigadas de incendios"
-                                    required
-                                />
+                                ></textarea>
                             </div>
                         </div>
                     </div>
@@ -324,12 +186,10 @@
                                 class="btn btn-secondary"
                                 >Regresar <i class="fa-solid fa-rotate-left"></i
                             ></a>
-                            <a
-                            href="/datos_generales_documentacion"
-                            class="btn btn-success"
-                            >Siguiente
-                            <i class="fa-solid fa-arrow-right"></i
-                        ></a>
+                            <button type="button" class="btn btn-success">
+                                Siguiente
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </form>
