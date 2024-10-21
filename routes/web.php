@@ -32,3 +32,7 @@ $router->get('/datos_generales_habitantes', function () {
 $router->get('/datos_generales_delegado', function () {
     return view('datos_generales_delegado');
 });
+
+$router->get('/datos_generales_responsables', function () {
+    return view('datos_generales_responsables');
+});

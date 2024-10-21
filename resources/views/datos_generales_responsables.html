@@ -12,11 +12,6 @@
         <link rel="stylesheet" href="/assets/DataTables/datatables.min.css" />
         <!-- Enlazar CSS -->
         <link rel="stylesheet" href="/assets/css/forms.css" />
-        <style>
-            .content-header {
-                margin-top: -100px;
-            }
-        </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -114,62 +109,19 @@
                 <header>1. Datos Generales</header>
                 <form action="#" class="form">
                     <div class="row">
-                        <div class="col-md-6 col-12 mb-3">
+                        <div class="col-md-6 col-12 mb-4">
                             <div class="form-group">
-                                <label for="provincia" style="font-weight: bold"
-                                    >Provincia</label
+                                <label
+                                    for="nombreResp"
+                                    style="font-weight: bold"
+                                    >Nombre responsable del CCGR</label
                                 >
                                 <input
                                     type="text"
                                     class="form-control"
-                                    name="provincia"
-                                    id="provincia"
-                                    placeholder="Ingresar la provincia"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="form-group">
-                                <label for="canton" style="font-weight: bold"
-                                    >Cantón</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="canton"
-                                    id="canton"
-                                    placeholder="Ingresar el canton"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12 mb-3">
-                            <div class="form-group">
-                                <label for="parroquia" style="font-weight: bold"
-                                    >Parroquia</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="parroquia"
-                                    id="parroquia"
-                                    placeholder="Ingresar la parroquia"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="form-group">
-                                <label for="comunidad" style="font-weight: bold"
-                                    >Comunidad/Barrio/Recinto</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="comunidad"
-                                    id="comunidad"
-                                    placeholder="Ingresar la comunidad"
+                                    name="nombreResp"
+                                    id="nombreResp"
+                                    placeholder="Ingresar el nombre del responsable"
                                     required
                                 />
                             </div>
@@ -177,16 +129,118 @@
                         <div class="col-md-6 col-12">
                             <div class="form-group">
                                 <label
-                                    for="coordenadax"
+                                    for="telfResp"
                                     style="font-weight: bold"
-                                    >Coordenadas X</label
+                                    >Teléfono del responsable del CCGR</label
                                 >
                                 <input
                                     type="text"
                                     class="form-control"
-                                    name="coordenadax"
-                                    id="coordenadax"
-                                    placeholder="Ingresar la coordenada X"
+                                    name="telfResp"
+                                    id="telfResp"
+                                    placeholder="Ingresar  el número de teléfono del responsable"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mb-4">
+                            <div class="form-group">
+                                <label
+                                    for="secreResp"
+                                    style="font-weight: bold"
+                                    >Nombre secretario/a del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="secreResp"
+                                    id="secreResp"
+                                    placeholder="Ingresar el nombre del secretario/a"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label
+                                    for="secreTelf"
+                                    style="font-weight: bold"
+                                    >Teléfono del secretario/a del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="secreTelf"
+                                    id="secreTelf"
+                                    placeholder="Ingresar el número de teléfono del secretario/a"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mb-4">
+                            <div class="form-group">
+                                <label
+                                    for="nombreCoord"
+                                    style="font-weight: bold"
+                                    >Nombre del coordinador/a brigadas de primera respuesta del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="nombreCoord"
+                                    id="nombreCoord"
+                                    placeholder="Ingresar el nombre del coordinador"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label
+                                    for="telfCoord"
+                                    style="font-weight: bold"
+                                    >Teléfono del coordinador/a brigadas de primera respuesta del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="telfCoord"
+                                    id="telfCoord"
+                                    placeholder="Ingresar el número de teléfono del coordinador/a"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mb-4">
+                            <div class="form-group">
+                                <label
+                                    for="nombreLiderPR"
+                                    style="font-weight: bold"
+                                    >Nombre del lider brigadas de primeros auxilios del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="nombreLiderPR"
+                                    id="nombreLiderPR"
+                                    placeholder="Ingresar el nombre del lider de primeros auxilios"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label
+                                    for="telfLiderPR"
+                                    style="font-weight: bold"
+                                    >Teléfono del lider brigadas de primeros auxilios del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="telfLiderPR"
+                                    id="telfLiderPR"
+                                    placeholder="Ingresar  el número de teléfono del lider de primeros auxilios"
                                     required
                                 />
                             </div>
@@ -194,16 +248,50 @@
                         <div class="col-md-6 col-12 mb-3">
                             <div class="form-group">
                                 <label
-                                    for="coordenaday"
+                                    for="nombreResp"
                                     style="font-weight: bold"
-                                    >Coordenadas Y</label
+                                    >Nombre responsable del CCGR</label
                                 >
                                 <input
                                     type="text"
                                     class="form-control"
-                                    name="coordenaday"
-                                    id="coordenaday"
-                                    placeholder="Ingresar la coordenada Y"
+                                    name="nombreResp"
+                                    id="nombreResp"
+                                    placeholder="Ingresar el nombre del responsable"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label
+                                    for="telfResp"
+                                    style="font-weight: bold"
+                                    >Teléfono del responsable del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="telfResp"
+                                    id="telfResp"
+                                    placeholder="Ingresar  el número de teléfono del responsable"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 mb-3">
+                            <div class="form-group">
+                                <label
+                                    for="nombreResp"
+                                    style="font-weight: bold"
+                                    >Nombre responsable del CCGR</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="nombreResp"
+                                    id="nombreResp"
+                                    placeholder="Ingresar el nombre del responsable"
                                     required
                                 />
                             </div>
@@ -211,16 +299,16 @@
                         <div class="col-md-6 col-12 mb-5">
                             <div class="form-group">
                                 <label
-                                    for="referencia"
+                                    for="telfResp"
                                     style="font-weight: bold"
-                                    >Referencia</label
+                                    >Teléfono del responsable del CCGR</label
                                 >
                                 <input
                                     type="text"
                                     class="form-control"
-                                    name="referencia"
-                                    id="referencia"
-                                    placeholder="Ingresar la referencia"
+                                    name="telfResp"
+                                    id="telfResp"
+                                    placeholder="Ingresar  el número de teléfono del responsable"
                                     required
                                 />
                             </div>
@@ -228,23 +316,65 @@
                     </div>
                     <div class="row">
                         <div class="col">
+                            <!-- Botón para abrir el modal de "Regresar" -->
                             <a
                                 href="javascript:void(0)"
                                 data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                                data-bs-target="#regresarModal"
                                 class="btn btn-secondary"
                                 >Regresar <i class="fa-solid fa-rotate-left"></i
                             ></a>
-                            <a
-                                href="/datos_generales_habitantes"
-                                class="btn btn-success"
-                                >Siguiente
-                                <i class="fa-solid fa-arrow-right"></i
-                            ></a>
+                            <button type="button" class="btn btn-success">
+                                Siguiente
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </form>
             </section>
+        </div>
+
+        <!-- Modal para el botón "Regresar" -->
+        <div
+            class="modal fade"
+            id="regresarModal"
+            tabindex="-1"
+            aria-labelledby="regresarModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="regresarModalLabel">
+                            ¿Seguro que deseas regresar?
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        Si regresas, se perderán los datos que has ingresado
+                        hasta ahora.
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancelar <i class="fa-solid fa-ban"></i>
+                        </button>
+                        <a
+                            href="/datos_generales_habitantes"
+                            class="btn btn-primary"
+                            >Aceptar <i class="fa-solid fa-check"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Enlazar jQuery localmente -->
