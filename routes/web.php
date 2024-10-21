@@ -22,5 +22,9 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/datos_generales_provincia', function () {
-    return view('datos_generales_provincia'); // Cambia 'crear_proyecto' por el nombre de la vista que estás utilizando
+    return view('datos_generales_provincia'); 
+});
+
+$router->get('/datos_generales_habitantes', function () {
+    return view('datos_generales_habitantes');
 });
