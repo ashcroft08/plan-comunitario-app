@@ -48,3 +48,7 @@ $router->get('/historico', function () {
 $router->get('/identificacion_amenaza', function () {
     return view('identificacion_amenaza');
 });
+
+$router->get('/desc_vulnerabilidad', function () {
+    return view('desc_vulnerabilidad');
+});

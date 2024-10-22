@@ -106,63 +106,61 @@
 
             <!-- Hoverable rows start -->
             <section class="container">
-                <header>2. Historico </header>
+                <header>4. Desc de Vulnerabilidad</header>
                 <div class="d-flex justify-content-end mb-6">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-plus"></i>
                         </span>
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#crearProyectoModal">
+                        <button
+                            class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#crearProyectoModal"
+                        >
                             Crear nueva
                         </button>
                     </div>
                 </div>
                 <form action="#" class="form">
                     <div class="table-responsive">
-                        <table class="table table-bordered" style="width:100%">
+                        <table class="table table-bordered" style="width: 100%">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Descripción del evento</th>
-                                <th scope="col">Frecuencia</th>
-                                <th scope="col">Causa</th>
-                                <th scope="col">Daños/Pérdidas generados humano</th>
-                                <th scope="col">Daños/Pérdidas generados materiales</th>
-                                <th scope="col">Daños/Pérdidas generados producción</th>
-                              </tr>
+                                <tr>
+                                    <th rowspan="2">#</th>
+                                    <th rowspan="2" style="text-align: center">
+                                        Amenazas
+                                    </th>
+                                    <th colspan="5" style="text-align: center">
+                                        Factores de Vulnerablidad
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Físico</th>
+                                    <th>Ambiental</th>
+                                    <th>Economico</th>
+                                    <th>Socio/Cultural</th>
+                                    <th>Poltica/Institucional</th>
+                                </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-    
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Incendios Forestales</td>
+                                    <td>saasdasdasdsa</td>
+                                    <td>ssasdaasdsadds</td>
+                                    <td>ssasdaasdsadds</td>
+                                    <td>ssasdaasdsadds</td>
+                                    <td>ssasdaasdsadds</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Accidentes de tránsito</td>
+                                    <td>saasdasdasdsa</td>
+                                    <td>ssasdaasdsadds</td>
+                                    <td>ssasdaasdsadds</td>
+                                    <td>ssasdaasdsadds</td>
+                                    <td>ssasdaasdsadds</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -177,7 +175,7 @@
                                 >Regresar <i class="fa-solid fa-rotate-left"></i
                             ></a>
                             <a
-                                href="/identificacion_amenaza"
+                                href="#"
                                 class="btn btn-success"
                                 >Siguiente
                                 <i class="fa-solid fa-arrow-right"></i
@@ -222,7 +220,7 @@
                             Cancelar <i class="fa-solid fa-ban"></i>
                         </button>
                         <a
-                            href="/datos_generales_responsables"
+                            href="/identificacion_amenaza"
                             class="btn btn-primary"
                             >Aceptar <i class="fa-solid fa-check"></i
                         ></a>
@@ -232,49 +230,110 @@
         </div>
 
         <!-- Modal Formulario "Crear nueva" -->
-    <div class="modal fade" id="crearProyectoModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="crearProyectoLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearProyectoLabel">Crear Nuevo Registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="nuevoRegistroForm">
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" id="fecha" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripción del evento</label>
-                            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="frecuencia" class="form-label">Frecuencia</label>
-                            <input type="text" class="form-control" id="frecuencia" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="causa" class="form-label">Causa</label>
-                            <input type="text" class="form-control" id="causa" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosHumanos" class="form-label">Daños Humanos</label>
-                            <input type="number" class="form-control" id="danosHumanos" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosMateriales" class="form-label">Daños Materiales</label>
-                            <input type="number" class="form-control" id="danosMateriales" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosProduccion" class="form-label">Daños en Producción</label>
-                            <input type="number" class="form-control" id="danosProduccion" required />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </form>
+        <div
+            class="modal fade"
+            id="crearProyectoModal"
+            data-bs-backdrop="static"
+            tabindex="-1"
+            aria-labelledby="crearProyectoLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="crearProyectoLabel">
+                            Crear Nueva Amenaza
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="nuevoRegistroForm">
+                            <!-- Campo para Amenaza -->
+                            <div class="mb-3">
+                                <label for="amenaza" class="form-label"
+                                    >Amenaza</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="amenaza"
+                                    required
+                                />
+                            </div>
+
+                            <!-- Campos para Factores de Vulnerabilidad -->
+                            <div class="mb-3">
+                                <label for="fisico" class="form-label"
+                                    >Factor Físico</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="fisico"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ambiental" class="form-label"
+                                    >Factor Ambiental</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="ambiental"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="economico" class="form-label"
+                                    >Factor Económico</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="economico"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="socioCultural" class="form-label"
+                                    >Factor Socio/Cultural</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="socioCultural"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label
+                                    for="politicoInstitucional"
+                                    class="form-label"
+                                    >Factor Político/Institucional</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="politicoInstitucional"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <!-- Botón para guardar -->
+                            <button type="submit" class="btn btn-primary">
+                                Guardar
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
         <!-- Enlazar jQuery localmente -->
         <script src="/js/jquery-3.7.1.min.js"></script>
@@ -282,10 +341,10 @@
         <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <script>
-            $('#nuevoRegistroForm').on('submit', function (e) {
+            $("#nuevoRegistroForm").on("submit", function (e) {
                 e.preventDefault();
-                alert('Registro guardado exitosamente.');
-                $('#crearProyectoModal').modal('hide');
+                alert("Registro guardado exitosamente.");
+                $("#crearProyectoModal").modal("hide");
             });
         </script>
     </body>
