@@ -106,63 +106,80 @@
 
             <!-- Hoverable rows start -->
             <section class="container">
-                <header>2. Historico </header>
-                <div class="d-flex justify-content-end mb-6">
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#crearProyectoModal">
-                            Crear nueva
-                        </button>
-                    </div>
-                </div>
+                <header>3. Identificación de la amenaza </header>
                 <form action="#" class="form">
                     <div class="table-responsive">
-                        <table class="table table-striped" style="width:100%">
+                        <table class="table table-bordered" style="width:100%">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Descripción del evento</th>
-                                <th scope="col">Frecuencia</th>
-                                <th scope="col">Causa</th>
-                                <th scope="col">Daños/Pérdidas generados humano</th>
-                                <th scope="col">Daños/Pérdidas generados materiales</th>
-                                <th scope="col">Daños/Pérdidas generados producción</th>
-                              </tr>
+                                <tr>
+                                    <th rowspan="2">Amenaza</th>
+                                    <th colspan="3" style="text-align: center;">Frecuencia</th>
+                                    <th colspan="3" style="text-align: center;">Intensidad</th>
+                                    <th colspan="3" style="text-align: center;">Magnitud</th>
+                                </tr>
+                                <tr>
+                                    <th>ALTO: 1 vez cada año</th>
+                                    <th>MEDIO: Más de 1 vez cada 5 años</th>
+                                    <th>BAJO: 1 vez cada 6 años o más</th>
+                                    <th>ALTO: Paraliza todas las actividades de la comunidad</th>
+                                    <th>MEDIO: Paraliza la mitad de las actividades locales</th>
+                                    <th>BAJO: Paralización de un 25% de las actividades o menos</th>
+                                    <th>ALTO: Del 100% al 76% del territorio</th>
+                                    <th>MEDIO: Del 75% al 51% del territorio</th>
+                                    <th>BAJO: Del 50% al 25% de afectación del territorio</th>
+                                </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-    
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
+                                <tr>
+                                    <td>Incendios Forestales</td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_frecuencia" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_frecuencia" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_frecuencia" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_intensidad" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_intensidad" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_intensidad" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_magnitud" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_magnitud" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="incendios_magnitud" value="bajo"></td>
+                                </tr>
+                                <!-- Repite lo mismo para las demás amenazas -->
+                                <tr>
+                                    <td>Accidentes de tránsito</td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_frecuencia" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_frecuencia" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_frecuencia" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_intensidad" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_intensidad" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_intensidad" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_magnitud" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_magnitud" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="accidentes_magnitud" value="bajo"></td>
+                                </tr>
+                                <!-- Agregar más amenazas de la misma manera -->
+                                <tr>
+                                    <td>Sequía</td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_frecuencia" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_frecuencia" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_frecuencia" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_intensidad" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_intensidad" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_intensidad" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_magnitud" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_magnitud" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="sequia_magnitud" value="bajo"></td>
+                                </tr>
+                                <tr>
+                                    <td>Robos</td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_frecuencia" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_frecuencia" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_frecuencia" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_intensidad" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_intensidad" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_intensidad" value="bajo"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_magnitud" value="alto"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_magnitud" value="medio"></td>
+                                    <td style="text-align: center;"><input type="radio" name="robos_magnitud" value="bajo"></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -228,51 +245,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal Formulario "Crear nueva" -->
-    <div class="modal fade" id="crearProyectoModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="crearProyectoLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearProyectoLabel">Crear Nuevo Registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="nuevoRegistroForm">
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" id="fecha" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripción del evento</label>
-                            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="frecuencia" class="form-label">Frecuencia</label>
-                            <input type="text" class="form-control" id="frecuencia" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="causa" class="form-label">Causa</label>
-                            <input type="text" class="form-control" id="causa" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosHumanos" class="form-label">Daños Humanos</label>
-                            <input type="number" class="form-control" id="danosHumanos" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosMateriales" class="form-label">Daños Materiales</label>
-                            <input type="number" class="form-control" id="danosMateriales" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosProduccion" class="form-label">Daños en Producción</label>
-                            <input type="number" class="form-control" id="danosProduccion" required />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
         <!-- Enlazar jQuery localmente -->
         <script src="/js/jquery-3.7.1.min.js"></script>

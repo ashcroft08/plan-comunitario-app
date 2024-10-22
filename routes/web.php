@@ -44,3 +44,7 @@ $router->get('/datos_generales_documentacion', function () {
 $router->get('/historico', function () {
     return view('historico');
 });
+
+$router->get('/identificacion_amenaza', function () {
+    return view('identificacion_amenaza');
+});
