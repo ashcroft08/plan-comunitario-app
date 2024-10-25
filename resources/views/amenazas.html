@@ -106,7 +106,7 @@
 
             <!-- Hoverable rows start -->
             <section class="container">
-                <header>5. Desc de Vulnerabilidad</header>
+                <header>2. Amenazas</header>
                 <div class="d-flex justify-content-end mb-6">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">
@@ -117,49 +117,27 @@
                             data-bs-toggle="modal"
                             data-bs-target="#crearProyectoModal"
                         >
-                            Crear nueva
+                            Crear nueva amenaza
                         </button>
                     </div>
                 </div>
                 <form action="#" class="form">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" style="width: 100%">
+                    <div class="table-responsive d-flex justify-content-center">
+                        <table class="table table-bordered" style="width: 80%">
                             <thead>
                                 <tr>
-                                    <th rowspan="2">#</th>
-                                    <th rowspan="2" style="text-align: center">
-                                        Amenazas
-                                    </th>
-                                    <th colspan="5" style="text-align: center">
-                                        Factores de Vulnerablidad
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>Físico</th>
-                                    <th>Ambiental</th>
-                                    <th>Economico</th>
-                                    <th>Socio/Cultural</th>
-                                    <th>Poltica/Institucional</th>
+                                    <th scope="col" class="col-1">#</th>
+                                    <th scope="col">Amenazas</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <th scope="row">1</th>
                                     <td>Incendios Forestales</td>
-                                    <td>saasdasdasdsa</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
+                                    <th scope="row">2</th>
                                     <td>Accidentes de tránsito</td>
-                                    <td>saasdasdasdsa</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -175,7 +153,7 @@
                                 >Regresar <i class="fa-solid fa-rotate-left"></i
                             ></a>
                             <a
-                                href="#"
+                                href="/identificacion_amenaza"
                                 class="btn btn-success"
                                 >Siguiente
                                 <i class="fa-solid fa-arrow-right"></i
@@ -220,7 +198,7 @@
                             Cancelar <i class="fa-solid fa-ban"></i>
                         </button>
                         <a
-                            href="/historico"
+                            href="/datos_generales_documentacion"
                             class="btn btn-primary"
                             >Aceptar <i class="fa-solid fa-check"></i
                         ></a>
@@ -242,7 +220,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="crearProyectoLabel">
-                            Crear Nueva Amenaza
+                            Crear Nuevo Registro
                         </h5>
                         <button
                             type="button"
@@ -253,79 +231,56 @@
                     </div>
                     <div class="modal-body">
                         <form id="nuevoRegistroForm">
-                            <!-- Campo para Amenaza -->
+                            <!-- Primer select para el tipo de amenaza -->
                             <div class="mb-3">
-                                <label for="amenaza" class="form-label"
-                                    >Amenaza</label
+                                <label for="tipoAmenaza" class="form-label"
+                                    >Tipo de Amenaza</label
                                 >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="amenaza"
-                                    required
-                                />
+                                <select id="tipoAmenaza" class="form-select">
+                                    <option value="" selected>
+                                        Selecciona el tipo de amenaza
+                                    </option>
+                                    <option value="naturales">Naturales</option>
+                                    <option value="antropicas">
+                                        Antrópicas
+                                    </option>
+                                    <option value="sociales">Sociales</option>
+                                </select>
                             </div>
 
-                            <!-- Campos para Factores de Vulnerabilidad -->
+                            <!-- Segundo select que se desbloquea según la opción seleccionada -->
                             <div class="mb-3">
-                                <label for="fisico" class="form-label"
-                                    >Factor Físico</label
+                                <label for="subAmenaza" class="form-label"
+                                    >Subcategoría de Amenaza</label
                                 >
-                                <textarea
-                                    class="form-control"
-                                    id="fisico"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="ambiental" class="form-label"
-                                    >Factor Ambiental</label
+                                <select
+                                    id="subAmenaza"
+                                    class="form-select"
+                                    disabled
                                 >
-                                <textarea
-                                    class="form-control"
-                                    id="ambiental"
-                                    rows="2"
-                                    required
-                                ></textarea>
+                                    <option value="" selected>
+                                        Selecciona una subcategoría
+                                    </option>
+                                </select>
                             </div>
-                            <div class="mb-3">
-                                <label for="economico" class="form-label"
-                                    >Factor Económico</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="economico"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="socioCultural" class="form-label"
-                                    >Factor Socio/Cultural</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="socioCultural"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
+
+                            <!-- Tercer select para elegir la amenaza específica -->
                             <div class="mb-3">
                                 <label
-                                    for="politicoInstitucional"
+                                    for="amenazaEspecifica"
                                     class="form-label"
-                                    >Factor Político/Institucional</label
+                                    >Amenaza Específica</label
                                 >
-                                <textarea
-                                    class="form-control"
-                                    id="politicoInstitucional"
-                                    rows="2"
-                                    required
-                                ></textarea>
+                                <select
+                                    id="amenazaEspecifica"
+                                    class="form-select"
+                                    disabled
+                                >
+                                    <option value="" selected>
+                                        Selecciona una amenaza específica
+                                    </option>
+                                </select>
                             </div>
-
-                            <!-- Botón para guardar -->
                             <button type="submit" class="btn btn-primary">
                                 Guardar
                             </button>
@@ -347,5 +302,7 @@
                 $("#crearProyectoModal").modal("hide");
             });
         </script>
+
+<script src="/assets/js/amenazas.js"></script>
     </body>
 </html>
