@@ -68,3 +68,7 @@ $router->get('/identificacion_riesgo', function () {
 $router->get('/componentes_reduccion_riesgo', function () {
     return view('componentes_reduccion_riesgo');
 });
+
+$router->get('/personas_necesitan_ayuda', function () {
+    return view('personas_necesitan_ayuda');
+});
