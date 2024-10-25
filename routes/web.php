@@ -69,6 +69,7 @@ $router->get('/personas_necesitan_ayuda', function () {
     return view('personas_necesitan_ayuda');
 });
 
+<<<<<<< HEAD
 $router->get('/analisis_riesgo', function () {
     return view('analisis_riesgo');
 });
@@ -83,4 +84,8 @@ $router->get('/mecanismo_alarma', function () {
 
 $router->get('/zona_de_seguridad', function () {
     return view('zona_de_seguridad');
+=======
+$router->get('/diagnostico_capacidad', function () {
+    return view('diagnostico_capacidad');
+>>>>>>> 7f8635a (Progreso local)
 });
