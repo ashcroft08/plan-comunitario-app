@@ -57,11 +57,10 @@ $router->get('/desc_vulnerabilidad', function () {
     return view('desc_vulnerabilidad');
 });
 
-<<<<<<< HEAD
 $router->get('/mecanismo_alarma', function () {
     return view('mecanismo_alarma');
-=======
+});
+
 $router->get('/identificacion_riesgo', function () {
     return view('identificacion_riesgo');
->>>>>>> 1cc7d02ebddb8924c9fec72e02b9750de7998edb
 });
