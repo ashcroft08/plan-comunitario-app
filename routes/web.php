@@ -57,10 +57,6 @@ $router->get('/desc_vulnerabilidad', function () {
     return view('desc_vulnerabilidad');
 });
 
-$router->get('/mecanismo_alarma', function () {
-    return view('mecanismo_alarma');
-});
-
 $router->get('/identificacion_riesgo', function () {
     return view('identificacion_riesgo');
 });
@@ -71,4 +67,20 @@ $router->get('/componentes_reduccion_riesgo', function () {
 
 $router->get('/personas_necesitan_ayuda', function () {
     return view('personas_necesitan_ayuda');
+});
+
+$router->get('/analisis_riesgo', function () {
+    return view('analisis_riesgo');
+});
+
+$router->get('/priorizacion_amenazas', function () {
+    return view('priorizacion_amenazas');
+});
+
+$router->get('/mecanismo_alarma', function () {
+    return view('mecanismo_alarma');
+});
+
+$router->get('/zona_de_seguridad', function () {
+    return view('zona_de_seguridad');
 });
