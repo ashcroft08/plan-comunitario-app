@@ -63,8 +63,11 @@ $router->get('/mecanismo_alarma', function () {
 
 $router->get('/identificacion_riesgo', function () {
     return view('identificacion_riesgo');
+<<<<<<< HEAD
 });
 
 $router->get('/componentes_reduccion_riesgo', function () {
     return view('componentes_reduccion_riesgo');
+=======
+>>>>>>> 5a8c00e9b6d4bf248574ce53b4f19e1addcd32d1
 });
