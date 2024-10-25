@@ -56,3 +56,7 @@ $router->get('/identificacion_amenaza', function () {
 $router->get('/desc_vulnerabilidad', function () {
     return view('desc_vulnerabilidad');
 });
+
+$router->get('/mecanismo_alarma', function () {
+    return view('mecanismo_alarma');
+});

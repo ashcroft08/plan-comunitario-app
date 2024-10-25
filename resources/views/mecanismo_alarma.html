@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Crear proyecto</title>
+        <!-- Enlazar CSS de Font Awesome localmente -->
+        <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" />
+        <!-- Enlazar Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <!-- Enlazar DataTables CSS -->
+        <link rel="stylesheet" href="/assets/DataTables/datatables.min.css" />
+        <!-- Enlazar CSS -->
+        <link rel="stylesheet" href="/assets/css/forms.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6"></div>
+                        <!-- /.col -->
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb float-md-end">
+                                    <li class="breadcrumb-item">
+                                        <a
+                                            href="javascript:void(0)"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop"
+                                            >Inicio</a
+                                        >
+                                        <!-- Modal -->
+                                        <div
+                                            class="modal fade"
+                                            id="staticBackdrop"
+                                            data-bs-backdrop="static"
+                                            data-bs-keyboard="false"
+                                            tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true"
+                                        >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1
+                                                            class="modal-title fs-5"
+                                                            id="staticBackdropLabel"
+                                                        >
+                                                            ¿Seguro que deseas
+                                                            ir al Inicio?
+                                                        </h1>
+                                                        <button
+                                                            type="button"
+                                                            class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"
+                                                        ></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Si regresas al inicio,
+                                                        se perderán los datos
+                                                        que has ingresado hasta
+                                                        ahora.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn-secondary"
+                                                            data-bs-dismiss="modal"
+                                                        >
+                                                            Cancelar
+                                                            <i
+                                                                class="fa-solid fa-ban"
+                                                            ></i>
+                                                        </button>
+                                                        <a
+                                                            href="/"
+                                                            class="btn btn-primary"
+                                                            role="button"
+                                                            >Aceptar
+                                                            <i
+                                                                class="fa-solid fa-check"
+                                                            ></i
+                                                        ></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="breadcrumb-item active"
+                                        aria-current="page"
+                                    >
+                                        Creación de proyecto
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+
+            <!-- Hoverable rows start -->
+            <section class="container">
+                <header>5. Desc de Vulnerabilidad</header>
+                <div class="d-flex justify-content-end mb-6">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                        <button
+                            class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#crearProyectoModal"
+                        >
+                            Crear nueva
+                        </button>
+                    </div>
+                </div>
+                <form action="#" class="form">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th colspan="3" style="text-align: center">
+                                        Mecanismo de alarma para situaciones de emergencia
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center">Tipo de amenaza</th>
+                                    <th style="text-align: center">Descripción de la alarma (Instrumento)</th>
+                                    <th style="text-align: center">¿Quién Activa?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p class="fw-bold">Amenaza 1:</p> Deslizamiento</td>
+                                    <td>La sirena sonara de forma intermitente durante 3 minutos con el fin de que se pueda escuchar por la mayor parte de la población.</td>
+                                    <td>Moradores de la parte baja solicitaran que a los responsable de las viviendas en la que se encuentra instalada la alarma.</td>
+                                </tr>
+                                <tr>
+                                    <td><p class="fw-bold">Amenaza 2:</p> Incendio forestal</td>
+                                    <td>Debido a la naturaleza del evento esta se la  realizará a viva voz  con el fin de que se pueda establecer un sonido repetitivo contacto en los diferentes puntos de la comunidad.</td>
+                                    <td>Todos los moradores  que se encuentran en la limpieza de quebradas y personal vivienda en la que se encuentra instalada la alarma.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row botonsform">
+                        <div class="col">
+                            <!-- Botón para abrir el modal de "Regresar" -->
+                            <a
+                                href="javascript:void(0)"
+                                data-bs-toggle="modal"
+                                data-bs-target="#regresarModal"
+                                class="btn btn-secondary"
+                                >Regresar <i class="fa-solid fa-rotate-left"></i
+                            ></a>
+                            <a
+                                href="#"
+                                class="btn btn-success"
+                                >Siguiente
+                                <i class="fa-solid fa-arrow-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- Modal para el botón "Regresar" -->
+        <div
+            class="modal fade"
+            id="regresarModal"
+            tabindex="-1"
+            aria-labelledby="regresarModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="regresarModalLabel">
+                            ¿Seguro que deseas regresar?
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        Si regresas, se perderán los datos que has ingresado
+                        hasta ahora.
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancelar <i class="fa-solid fa-ban"></i>
+                        </button>
+                        <a
+                            href="/historico"
+                            class="btn btn-primary"
+                            >Aceptar <i class="fa-solid fa-check"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Formulario "Crear nueva" -->
+        <div
+            class="modal fade"
+            id="crearProyectoModal"
+            data-bs-backdrop="static"
+            tabindex="-1"
+            aria-labelledby="crearProyectoLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="crearProyectoLabel">
+                            Crear Nueva Amenaza
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="nuevoRegistroForm">
+                            <!-- Campo para Amenaza -->
+                            <div class="mb-3">
+                                <label for="amenaza" class="form-label"
+                                    >Amenaza</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="amenaza"
+                                    required
+                                />
+                            </div>
+
+                            <!-- Campos para Factores de Vulnerabilidad -->
+                            <div class="mb-3">
+                                <label for="fisico" class="form-label"
+                                    >Factor Físico</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="fisico"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ambiental" class="form-label"
+                                    >Factor Ambiental</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="ambiental"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="economico" class="form-label"
+                                    >Factor Económico</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="economico"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="socioCultural" class="form-label"
+                                    >Factor Socio/Cultural</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="socioCultural"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label
+                                    for="politicoInstitucional"
+                                    class="form-label"
+                                    >Factor Político/Institucional</label
+                                >
+                                <textarea
+                                    class="form-control"
+                                    id="politicoInstitucional"
+                                    rows="2"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <!-- Botón para guardar -->
+                            <button type="submit" class="btn btn-primary">
+                                Guardar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enlazar jQuery localmente -->
+        <script src="/js/jquery-3.7.1.min.js"></script>
+        <!-- Enlazar Bootstrap JS -->
+        <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            $("#nuevoRegistroForm").on("submit", function (e) {
+                e.preventDefault();
+                alert("Registro guardado exitosamente.");
+                $("#crearProyectoModal").modal("hide");
+            });
+        </script>
+    </body>
+</html>
