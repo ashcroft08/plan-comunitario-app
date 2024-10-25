@@ -107,54 +107,130 @@
             <!-- Hoverable rows start -->
             <section class="container">
                 <header>4. Historico de eventos adversos</header>
-                <div class="d-flex justify-content-end mb-6">
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#crearProyectoModal">
-                            Crear nuevo evento adverso
-                        </button>
-                    </div>
-                </div>
                 <form action="#" class="form">
                     <div class="table-responsive">
-                        <table class="table table-bordered" style="width:100%">
+                        <table class="table table-bordered" style="width: 100%">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Descripción del evento</th>
-                                <th scope="col">Frecuencia</th>
-                                <th scope="col">Causa</th>
-                                <th scope="col">Daños/Pérdidas generados humano</th>
-                                <th scope="col">Daños/Pérdidas generados materiales</th>
-                                <th scope="col">Daños/Pérdidas generados producción</th>
-                              </tr>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Descripción del evento</th>
+                                    <th scope="col">Frecuencia</th>
+                                    <th scope="col">Causa</th>
+                                    <th scope="col">Daños Humanos</th>
+                                    <th scope="col">Daños Materiales</th>
+                                    <th scope="col">Daños en Producción</th>
+                                </tr>
                             </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-    
-                              </tr>
+                            <tbody id="tablaEventos">
+                                <tr>
+                                    <td>-</td>
+                                    <td>
+                                        <input
+                                            type="date"
+                                            id="fecha"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>Incendios Forestales</td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="frecuencia"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="causa"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="danosHumanos"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="danosMateriales"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="danosProduccion"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                </tr>
                             </tbody>
+                            <!-- Fila para agregar nuevo registro -->
+                            <tfoot>
+                                <tr>
+                                    <td>-</td>
+                                    <td>
+                                        <input
+                                            type="date"
+                                            id="fecha"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>Accidentes de tránsito</td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="frecuencia"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="causa"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="danosHumanos"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="danosMateriales"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            id="danosProduccion"
+                                            class="form-control"
+                                            required
+                                        />
+                                    </td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                     <div class="row botonsform">
@@ -222,61 +298,16 @@
             </div>
         </div>
 
-        <!-- Modal Formulario "Crear nueva" -->
-    <div class="modal fade" id="crearProyectoModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="crearProyectoLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearProyectoLabel">Crear Nuevo Registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="nuevoRegistroForm">
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" id="fecha" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripción del evento</label>
-                            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="frecuencia" class="form-label">Frecuencia</label>
-                            <input type="text" class="form-control" id="frecuencia" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="causa" class="form-label">Causa</label>
-                            <input type="text" class="form-control" id="causa" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosHumanos" class="form-label">Daños Humanos</label>
-                            <input type="number" class="form-control" id="danosHumanos" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosMateriales" class="form-label">Daños Materiales</label>
-                            <input type="number" class="form-control" id="danosMateriales" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="danosProduccion" class="form-label">Daños en Producción</label>
-                            <input type="number" class="form-control" id="danosProduccion" required />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
         <!-- Enlazar jQuery localmente -->
         <script src="/js/jquery-3.7.1.min.js"></script>
         <!-- Enlazar Bootstrap JS -->
         <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <script>
-            $('#nuevoRegistroForm').on('submit', function (e) {
+            $("#nuevoRegistroForm").on("submit", function (e) {
                 e.preventDefault();
-                alert('Registro guardado exitosamente.');
-                $('#crearProyectoModal').modal('hide');
+                alert("Registro guardado exitosamente.");
+                $("#crearProyectoModal").modal("hide");
             });
         </script>
     </body>

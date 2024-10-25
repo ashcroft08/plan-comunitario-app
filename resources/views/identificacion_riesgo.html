@@ -106,21 +106,7 @@
 
             <!-- Hoverable rows start -->
             <section class="container">
-                <header>5. Desc de Vulnerabilidad</header>
-                <div class="d-flex justify-content-end mb-6">
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                        <button
-                            class="btn btn-success"
-                            data-bs-toggle="modal"
-                            data-bs-target="#crearProyectoModal"
-                        >
-                            Crear nueva
-                        </button>
-                    </div>
-                </div>
+                <header>6. Identificación de Riesgo</header>
                 <form action="#" class="form">
                     <div class="table-responsive">
                         <table class="table table-bordered" style="width: 100%">
@@ -142,18 +128,74 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Incendios Forestales</td>
-                                    <td>saasdasdasdsa</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
+                                    <td>
+                                        <textarea
+                                            name="vulnerabilidades"
+                                            id="vulnerabilidades"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea
+                                            name="capacidades"
+                                            id="capacidades"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea
+                                            name="cultural"
+                                            id="cultural"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea
+                                            name="riesgo"
+                                            id="riesgo"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Accidentes de tránsito</td>
-                                    <td>saasdasdasdsa</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
-                                    <td>ssasdaasdsadds</td>
+                                    <td>
+                                        <textarea
+                                            name="vulnerabilidades"
+                                            id="vulnerabilidades"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea
+                                            name="capacidades"
+                                            id="capacidades"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea
+                                            name="cultural"
+                                            id="cultural"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea
+                                            name="riesgo"
+                                            id="riesgo"
+                                            class="form-control"
+                                            required
+                                        ></textarea>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -214,112 +256,6 @@
                         <a href="/historico" class="btn btn-primary"
                             >Aceptar <i class="fa-solid fa-check"></i
                         ></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Formulario "Crear nueva" -->
-        <div
-            class="modal fade"
-            id="crearProyectoModal"
-            data-bs-backdrop="static"
-            tabindex="-1"
-            aria-labelledby="crearProyectoLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="crearProyectoLabel">
-                            Crear Nueva Amenaza
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="nuevoRegistroForm">
-                            <!-- Campo para Amenaza -->
-                            <div class="mb-3">
-                                <label for="amenaza" class="form-label"
-                                    >Amenaza</label
-                                >
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="amenaza"
-                                    required
-                                />
-                            </div>
-
-                            <!-- Campos para Factores de Vulnerabilidad -->
-                            <div class="mb-3">
-                                <label for="fisico" class="form-label"
-                                    >Factor Físico</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="fisico"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="ambiental" class="form-label"
-                                    >Factor Ambiental</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="ambiental"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="economico" class="form-label"
-                                    >Factor Económico</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="economico"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="socioCultural" class="form-label"
-                                    >Factor Socio/Cultural</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="socioCultural"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label
-                                    for="politicoInstitucional"
-                                    class="form-label"
-                                    >Factor Político/Institucional</label
-                                >
-                                <textarea
-                                    class="form-control"
-                                    id="politicoInstitucional"
-                                    rows="2"
-                                    required
-                                ></textarea>
-                            </div>
-
-                            <!-- Botón para guardar -->
-                            <button type="submit" class="btn btn-primary">
-                                Guardar
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>
