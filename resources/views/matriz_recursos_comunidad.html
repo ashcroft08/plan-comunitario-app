@@ -106,7 +106,7 @@
 
             <!-- Hoverable rows start -->
             <section class="container">
-                <header>12. Diagnostico de la Capacidad</header>
+                <header>13. Matriz de recursos de la comunidaad</header>
                 <div class="d-flex justify-content-end mb-6">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">
@@ -117,7 +117,7 @@
                             data-bs-toggle="modal"
                             data-bs-target="#crearProyectoModal"
                         >
-                            Crear nuevo diagnóstico
+                            Crear nuevo recurso
                         </button>
                     </div>
                 </div>
@@ -127,18 +127,19 @@
                             <thead>
                                 <tr>
                                     <th rowspan="2">#</th>
-                                    <th rowspan="2">Nombre</th>
+                                    <th rowspan="2">Descripción de recursos</th>
                                     <th rowspan="2">
-                                        Descripción de la capacidad
+                                        Responsable o propietario
                                     </th>
-                                    <th colspan="2">Dirección</th>
-                                    <th colspan="2">N° Teléfono</th>
+                                    <th rowspan="2">Cantidad</th>
+                                    <th rowspan="2">Dónde se ubica</th>
+                                    <th colspan="3">Estado</th>
+                                    <th rowspan="2">Observaciones</th>
                                 </tr>
                                 <tr>
-                                    <th>Domicilio</th>
-                                    <th>Trabajo</th>
-                                    <th>Fijo</th>
-                                    <th>Celular</th>
+                                    <th>Bueno</th>
+                                    <th>Regular</th>
+                                    <th>Malo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -148,7 +149,9 @@
                                     <td>loremajjsj sjsjs</td>
                                     <td>loremajjsj sjsjs</td>
                                     <td>loremajjsj sjsjs</td>
-                                    <td>loremajjsj sjsjs</td>
+                                    <td>X</td>
+                                    <td></td>
+                                    <td></td>
                                     <td>loremajjsj sjsjs</td>
                                 </tr>
                                 <tr>
@@ -157,7 +160,9 @@
                                     <td>loremajjsj sjsjs</td>
                                     <td>loremajjsj sjsjs</td>
                                     <td>loremajjsj sjsjs</td>
-                                    <td>loremajjsj sjsjs</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>X</td>
                                     <td>loremajjsj sjsjs</td>
                                 </tr>
                             </tbody>
@@ -174,7 +179,7 @@
                                 >Regresar <i class="fa-solid fa-rotate-left"></i
                             ></a>
                             <a
-                                href="/matriz_recursos_comunidad"
+                                href="/personas_necesitan_ayuda"
                                 class="btn btn-success"
                                 >Siguiente
                                 <i class="fa-solid fa-arrow-right"></i
@@ -219,7 +224,7 @@
                             Cancelar <i class="fa-solid fa-ban"></i>
                         </button>
                         <a
-                            href="/zona_de_seguridad"
+                            href="/diagnostico_capacidad"
                             class="btn btn-primary"
                             >Aceptar <i class="fa-solid fa-check"></i
                         ></a>
@@ -228,7 +233,7 @@
             </div>
         </div>
 
-        <!-- Modal Formulario "Crear nuevo diagnóstico" -->
+        <!-- Modal Formulario "Crear nuevo recurso" -->
         <div
             class="modal fade"
             id="crearProyectoModal"
@@ -241,7 +246,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="crearProyectoLabel">
-                            Crear Nuevo Diagnóstico
+                            Crear Nuevo Recurso
                         </h5>
                         <button
                             type="button"
@@ -252,88 +257,126 @@
                     </div>
                     <div class="modal-body">
                         <form id="nuevoRegistroForm">
-                            <!-- Campo Nombre -->
+                            <!-- Descripción del Recurso -->
                             <div class="mb-3">
-                                <label for="nombre" class="form-label"
-                                    >Nombre</label
-                                >
-                                <input
-                                    type="text"
-                                    id="nombre"
-                                    class="form-control"
-                                    placeholder="Ingrese el nombre"
-                                    required
-                                />
-                            </div>
-
-                            <!-- Descripción de la Capacidad -->
-                            <div class="mb-3">
-                                <label for="descripcion" class="form-label"
-                                    >Descripción</label
+                                <label
+                                    for="descripcionRecurso"
+                                    class="form-label"
+                                    >Descripción de recursos</label
                                 >
                                 <textarea
-                                    id="descripcion"
+                                    id="descripcionRecurso"
                                     class="form-control"
                                     rows="3"
-                                    placeholder="Descripción de la capacidad"
+                                    placeholder="Describa el recurso"
                                     required
                                 ></textarea>
                             </div>
 
-                            <!-- Dirección: Domicilio y Trabajo -->
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="domicilio" class="form-label"
-                                        >Domicilio</label
-                                    >
+                            <!-- Responsable o Propietario -->
+                            <div class="mb-3">
+                                <label for="responsable" class="form-label"
+                                    >Responsable o propietario</label
+                                >
+                                <input
+                                    type="text"
+                                    id="responsable"
+                                    class="form-control"
+                                    placeholder="Ingrese el responsable o propietario"
+                                    required
+                                />
+                            </div>
+
+                            <!-- Cantidad -->
+                            <div class="mb-3">
+                                <label for="cantidad" class="form-label"
+                                    >Cantidad</label
+                                >
+                                <input
+                                    type="number"
+                                    id="cantidad"
+                                    class="form-control"
+                                    placeholder="Ingrese la cantidad"
+                                    required
+                                />
+                            </div>
+
+                            <!-- Ubicación -->
+                            <div class="mb-3">
+                                <label for="ubicacion" class="form-label"
+                                    >Dónde se ubica</label
+                                >
+                                <input
+                                    type="text"
+                                    id="ubicacion"
+                                    class="form-control"
+                                    placeholder="Ingrese la ubicación"
+                                    required
+                                />
+                            </div>
+
+                            <!-- Estado del Recurso -->
+                            <div class="mb-3">
+                                <label class="form-label">Estado</label>
+                                <div class="form-check">
                                     <input
-                                        type="text"
-                                        id="domicilio"
-                                        class="form-control"
-                                        placeholder="Ingrese el domicilio"
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="estado"
+                                        id="estadoBueno"
+                                        value="bueno"
                                         required
                                     />
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="trabajo" class="form-label"
-                                        >Trabajo</label
+                                    <label
+                                        class="form-check-label"
+                                        for="estadoBueno"
                                     >
+                                        Bueno
+                                    </label>
+                                </div>
+                                <div class="form-check">
                                     <input
-                                        type="text"
-                                        id="trabajo"
-                                        class="form-control"
-                                        placeholder="Ingrese la dirección de trabajo"
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="estado"
+                                        id="estadoRegular"
+                                        value="regular"
                                     />
+                                    <label
+                                        class="form-check-label"
+                                        for="estadoRegular"
+                                    >
+                                        Regular
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="estado"
+                                        id="estadoMalo"
+                                        value="malo"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="estadoMalo"
+                                    >
+                                        Malo
+                                    </label>
                                 </div>
                             </div>
 
-                            <!-- Teléfonos: Fijo y Celular -->
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="telefonoFijo" class="form-label"
-                                        >Teléfono Fijo</label
-                                    >
-                                    <input
-                                        type="tel"
-                                        id="telefonoFijo"
-                                        class="form-control"
-                                        placeholder="Ingrese el teléfono fijo"
-                                    />
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label
-                                        for="telefonoCelular"
-                                        class="form-label"
-                                        >Teléfono Celular</label
-                                    >
-                                    <input
-                                        type="tel"
-                                        id="telefonoCelular"
-                                        class="form-control"
-                                        placeholder="Ingrese el teléfono celular"
-                                        required
-                                    />
-                                </div>
+                            <!-- Observaciones -->
+                            <div class="mb-3">
+                                <label for="observaciones" class="form-label"
+                                    >Observaciones</label
+                                >
+                                <textarea
+                                    id="observaciones"
+                                    class="form-control"
+                                    rows="3"
+                                    placeholder="Ingrese cualquier observación relevante"
+                                ></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary">

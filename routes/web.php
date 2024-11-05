@@ -88,3 +88,7 @@ $router->get('/zona_de_seguridad', function () {
 $router->get('/diagnostico_capacidad', function () {
     return view('diagnostico_capacidad');
 });
+
+$router->get('/matriz_recursos_comunidad', function () {
+    return view('matriz_recursos_comunidad');
+});
