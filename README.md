@@ -1,26 +1,52 @@
-# Lumen PHP Framework
+# Plan Comunitario de Gestión de Riesgos
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+Aplicación web para la elaboración y gestión del **Plan Comunitario de Gestión de Riesgos de Desastres**, una herramienta utilizada a nivel comunitario para inventariar recursos, amenazas, vulnerabilidades y capacidades locales.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Desarrollada con **Lumen (Laravel)** para el backend y vistas HTML con **Bootstrap** para el frontend.
 
-> **Note:** In the years since releasing Lumen, PHP has made a variety of wonderful performance improvements. For this reason, along with the availability of [Laravel Octane](https://laravel.com/docs/octane), we no longer recommend that you begin new projects with Lumen. Instead, we recommend always beginning new projects with [Laravel](https://laravel.com).
+## Funcionalidades
 
-## Official Documentation
+El sistema cubre los módulos típicos de un plan comunitario de gestión de riesgos:
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+- **Datos generales de la comunidad:** provincia, habitantes, delegado, responsables y documentación.
+- **Identificación de amenazas:** registro y descripción de amenazas locales.
+- **Vulnerabilidad y riesgo:** descripción de vulnerabilidades y análisis de riesgo.
+- **Priorización de amenazas** y **diagnóstico de capacidad** de la comunidad.
+- **Mecanismo de alarma** y **zonas de seguridad.**
+- **Matriz de recursos de la comunidad** para la respuesta local.
+- **Histórico** de eventos.
 
-## Contributing
+## Tech Stack
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Capa      | Tecnología                          |
+|-----------|-------------------------------------|
+| Backend   | PHP · Lumen (Laravel) micro-framework |
+| Frontend  | HTML · CSS · Bootstrap              |
+| DB        | MySQL (mediante el ORM de Lumen)    |
+| Testing   | PHPUnit                            |
+| Paquetes  | Composer                           |
 
-## Security Vulnerabilities
+## Estructura
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+app/         → lógica de la aplicación (Lumen)
+routes/      → rutas web (web.php)
+resources/views/  → vistas HTML
+public/      → assets públicos
+bootstrap/   → bootstrap de la app
+database/    → migrations y seeders
+tests/       → tests PHPUnit
+```
 
-## License
+## Cómo ejecutarlo
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+cp .env.example .env
+# Configurar credenciales de BD en .env
+php -S localhost:8000 -t public
+```
+
+## Sobre la implementación
+
+Las rutas (`routes/web.php`) exponen directamente las vistas de cada módulo del plan comunitario. El proyecto aprovecha el enrutamiento limpio y liviano de Lumen para servir una aplicación administrativa donde varias vistas forman un flujo guiado de llenado del plan.
